@@ -1,7 +1,7 @@
 ---
 title: centos7定时任务
 date: 2020-02-17 10:24:54
-author: sun bo
+author: fuf
 notebook: blog
 evernote-version: 0
 source: 原创
@@ -23,7 +23,7 @@ blogexcerpt:
 ``` 
 yun install crontabs
 systemctl enable crond # 设置为开机启动
-systenctl start crond # 启动crond服务
+systemctl start crond # 启动crond服务
 
 ```
 # 设置用户自定义定时任务
@@ -47,8 +47,17 @@ Example of job definition:
 上面的命令为
 分钟(0-59) 小时(0-23)日(1-31)月(1-12)星期(0-6，0表示周日) 用户名 需要执行的命令 
 
+“*”代表取值范围内的数字,
+
+“/”代表”每”,
+
+“-”代表从某个数字到某个数字,
+
+“,”分开几个离散的数字
+
+
 例子：
-    */30 * * * root /usr/local/mycommand.sh (每天，每30分钟执行一次 mycommand命令)
+    */30 * * * * root /usr/local/mycommand.sh (每天，每30分钟执行一次 mycommand命令)
 
     * 3 * * * root /usr/local/mycommand.sh (每天凌晨三点，执行命令脚本，PS:这里由于第一个的分钟没有设置，那么就会每天凌晨3点的每分钟都执行一次命令)
 
