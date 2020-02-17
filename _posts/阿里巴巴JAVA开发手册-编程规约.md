@@ -1,3 +1,16 @@
+---
+title: 阿里巴巴JAVA开发手册-编程规约
+date: 2019-08-17 20:21:12
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - Java,Alibaba
+blogexcerpt:
+---
+
 
 # 编程规约
 本节中基本是一些对于编程风格，对于程序员之间的代码编码编写进行统一要求，使得代码的阅读变得更为清晰，易懂。具体可以查看 1.5.0 版本的 JAVA 开发手册，这里主要挑出一些平时可能会忽略，易错的部分。
