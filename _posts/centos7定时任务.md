@@ -8,11 +8,11 @@ source: 原创
 thumbnail: 
 tags:
     - 默认
-blogexcerpt: 在windows上有计划任务，centos7 自然也有计划任务，而且设置更为灵活，好用。centos7 上可以利用crontab 来执行计划任务， 依赖与 crond 的系统服务，这个服务是系统自带的，可以直接查看状态，启动，停止
+blogexcerpt: 
 ---
 
 <!-- more -->
-## 说明，简介，更新
+### 在windows上有计划任务，centos7 自然也有计划任务，而且设置更为灵活，好用。centos7 上可以利用crontab 来执行计划任务， 依赖与 crond 的系统服务，这个服务是系统自带的，可以直接查看状态，启动，停止
 <!-- more -->
 
 
