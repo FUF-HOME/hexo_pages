@@ -1,6 +1,22 @@
+---
+title: centos7定时任务
+date: 2020-02-17 10:24:54
+author: sun bo
+notebook: blog
+evernote-version: 0
+source: 原创
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
 
+<!-- more -->
 
-<!--  在windows上有计划任务，centos7 自然也有计划任务，而且设置更为灵活，好用。centos7 上可以利用crontab 来执行计划任务， 依赖与 crond 的系统服务，这个服务是系统自带的，可以直接查看状态，启动，停止。-->
+### 在windows上有计划任务，centos7 自然也有计划任务，而且设置更为灵活，好用。centos7 上可以利用crontab 来执行计划任务， 依赖与 crond 的系统服务，这个服务是系统自带的，可以直接查看状态，启动，停止
+
+<!-- more -->
+
 
 # 安装 crontabs 服务并且设置开机启动
 
