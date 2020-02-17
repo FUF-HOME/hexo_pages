@@ -76,6 +76,11 @@ Example of job definition:
 
     10,30 * * * * * root /usr/local/mycommand.sh (每小时的10,30分钟，分别执行一次命令脚本，共执行2次）
 ```
+# 定时到秒
+
+在上面的最小时间单位只是分钟，可是平常项目有时候会要求秒级别的定时，这时候怎么办呢？
+1. 
+
 
 # 保存生效
 在文件中写入命令，保存。之后加载任务，使其生效：`crontab /etc/crontab`  
@@ -84,14 +89,14 @@ Example of job definition:
 
 # 查看 Crontab 定时任务启动是否成功
 1. 先手动检查定时任务脚本是否能够单独运行，并且crond启动与否
-   1. systemctl status crond # 查看crond的状态
-   2. systemctl start crond #启动crond服务
+   1. ` systemctl status crond` # 查看crond的状态  
+   2. ` systemctl start crond ` #启动crond服务
 2. 查看crontab执行纪录
    1. 如果出现crontab定时任务不执行的情况，运行命令，脚本和crond都没有出现问题，那么就需要通过日志确定问题所在。
-   2. crontab的日志位置一般在/var/log/cron,可以看用下面的命令来查看日志。   
+   2. crontab的日志位置一般在**/var/log/cron**,可以看用下面的命令来查看日志。   
      ` tail -f /var/log/cron `  
 上面的语句会纪录是否执行了某些计划的脚本，但是具体执行是否正确以及脚本执行过程中的一些信息linux会通过邮件形式发送到给该用户。 对于root用户该邮件记录位于**/var/spool/mail/root**，通过以下命令可以查看最近的crontab执行情况。  
-     ` tail -f /var/spool/mail/root `
+     ` tail -f /var/spool/mail/root `  
 mail邮件一般只会记录脚本执行成功与否，如果执行失败，无法给出进一步的错误信息，这时需要我们将语句执行的错误信息
 
 重定向至文件中，这样可以很方便的查看错误信息
