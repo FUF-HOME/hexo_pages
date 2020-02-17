@@ -1,3 +1,17 @@
+---
+title: 阿里巴巴JAVA开发手册-MySQL
+date: 2018-08-17 20:59:51
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - JAVA,Alibaba
+blogexcerpt:
+---
+
+
 # （五） MySQL数据库
 
 # 建表规约
