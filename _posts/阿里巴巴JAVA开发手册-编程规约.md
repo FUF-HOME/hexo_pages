@@ -148,3 +148,121 @@
 - 2. ArrayList 的 subList 结果不可强转成 ArrayList，否则会抛出 ClassCastException 异常，即 java.util.RandomAccessSubList cannot be cast to java.util.ArrayList。
 
     > 说明：subList 返回的是 ArrayList 的内部类 SubList，并不是 ArrayList 而是 ArrayList 的一个视图，对于 SubList 子列表的所有操作最终会反映到原列表上。
+
+- 3.使用 Map 的方法 keySet() / values() / entrySet() 返回集合对象时，不可以对其进行添加元素操作，否则会抛出UnsupportedOperationException 异常。
+- 5.在 subList 场景中，高度注意对原集合元素的增加或删除，均会导致子列表的遍历、增加、删除产生 ConcurrentModificationException 异常。
+- 6.使用集合转数组的方法，必须使用集合的 toArray(T[] array)，传入的是类型完全一致、长度为 0 的空数组。
+     > 说明：使用 toArray 带参方法，数组空间大小的 length：
+
+    - 1） 等于 0，动态创建与 size 相同的数组，性能最好。
+
+    - 2） 大于 0 但小于 size，重新创建大小等于 size 的数组，增加 GC 负担。
+
+    - 3） 等于 size，在高并发情况下，数组创建完成之后，size 正在变大的情况下，负面影响与上相同。
+
+    - 4） 大于 size，空间浪费，且在 size 处插入 null 值，存在 NPE 隐患。
+- 7.在使用 Collection 接口任何实现类的 addAll()方法时，都要对输入的集合参数进行 NPE 判断。
+
+    > 说明：在 ArrayList#addAll 方法的第一行代码即 Object[] a = c.toArray(); 其中 c 为输入集合参数，如果为 null，则直接抛出异常。
+- 11.不要在 foreach 循环中进行元素的 remove / add 操作。 remove 元素请使用 Iterator 方式。如果是并发操作，需要对 Iterator 对象加锁。
+
+- 13.集合泛型定义时，在 JDK7 及以上，使用 diamond 语法或全省略。
+     ```
+     // diamond 方式，即<> 
+     HashMap<String, String> userCache = new HashMap<>(16); 
+     // 全省略方式 
+     ArrayList<User> users = new ArrayList(10); 
+     ```
+
+- 15.遍历 Map 类集合应使用 entrySet，而不是 keySet。
+    > 说明：keySet 其实是遍历了 2 次，一次是转为 Iterator 对象，另一次是从 hashMap 中取出 key 所对应的 value。而 entrySet 只是遍历了一次就把 key 和 value 都放到了 entry 中，效率更高。如果是 JDK8，使用 Map.forEach 方法。
+- 16.高度注意 Map 类集合 K/V 能不能存储 null 值的情况。
+- 18.对集合进行去重操作应使用 Set 的特性，而不是使用 List 的 contains 方法。
+
+# （六）并发控制
+- 1.获取单例对象需要保证线程安全，其中的方法也要保证线程安全。
+    > 说明：资源驱动类，工具类，单例工厂类都需要注意。
+- 3.线程资源必须通过线程池提供，不允许在应用中自行显式创建线程。
+
+    - 说明：线程池的好处是减少在创建和销毁线程上所消耗的时间以及系统资源的开销，解决资源不足的问题。如果不使用线程池，有可能造成系统创建大量同类线程而导致消耗完内存或者“过度切换”的问题。
+
+- 4.线程池不允许使用 Executors 去创建，而是通过 ThreadPoolExecutor 的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。
+- 6.必须回收自定义的 ThreadLocal 变量，尤其在线程池场景下，线程经常会被复用，如果不清理自定义的 ThreadLocal 变量，可能会影响后续业务逻辑和造成内存泄露等问题。尽量在代理中使用 try-finally 块进行回收。
+- 8.对多个资源、数据库表、对象同时加锁时，需要保持一致的加锁顺序，否则可能会造成死锁。
+    > 说明：线程一需要对表 A,B,C 依次全部加锁后才可以进行更新操作，那么线程二的加锁顺序也必须时 A,B,C，否则可能出现死锁。
+- 9.在使用阻塞等待获取锁的方式中，必须在 try 代码块之外，并且在加锁方法与 try 代码块之间没有任何可能抛出异常的方法调用，避免加锁成功后，在 finally 中无法解锁。
+    ```
+    // 正例：
+    Lock lock = new XxxLock();
+    // ...
+    lock.lock();
+    try {
+        doSomething();
+        doOthers();
+    } finally {
+        lock.unlock();
+    }
+    // 反例：
+    Lock lock = new XxxLock();
+    // ...
+    try {
+        // 如果此处抛出异常，则直接执行 finally 代码块
+        doSomething();
+        // 无论加锁是否成功，finally 代码块都会执行
+        lock.lock();
+        doOthers();
+    } finally {
+        lock.unlock();
+    }
+
+     ```
+- 10.在使用尝试机制来获取锁的方式中，进入业务代码块之前，必须先判断当前线程是否持有锁。锁的释放规则与锁的阻塞等待方式相同。
+    ```
+        // 正例：
+    Lock lock = new XxxLock();
+    // ...
+    boolean isLocked = lock.tryLock();
+    if (isLocked) {
+        try {
+            doSomething();
+            doOthers();
+        } finally {
+            lock.unlock();
+        } }
+    ```
+- 15.避免 Random 实例被多线程使用，虽然共享该实例是线程安全的，但会因竞争同一 seed 导致的性能下降。
+    > 说明：Random 实例包括 java.util.Random 的实例或者 Math.random() 的方式。
+
+    > 正例：在 JDK7 之后，可以直接使用 API ThreadLocalRandom，而在 JDK7 之前，需要编码保证每个线程持有一个实例。
+
+# （七）控制语句
+- 1.在一个 switch 块内，每个 case 要么通过 continue / break / return 等来终止，要么注释说明程序将继续执行到哪一个 case 为止；在一个 switch 块内，都必须包含一个 default 语句并且放在最后，即使它什么代码也没有。
+     > 说明 break 是推出 switch 语句块，而 return 是推出方法体
+
+- 2 当 switch 括号内的变量类型为 String 并且此变量为外部参数，必须先进行 null 判断
+- 5.在表达特殊情况的分支时，少用 if - else 方式。
+    ```
+    if(condition){
+        return obj;
+    }
+
+    ```
+
+    > 说明：如果非使用 if()...else if()...else...方式表达逻辑，请勿超过 3 层。
+
+    > 正例：超过 3 层的 if-else 的逻辑判断代码可以使用卫语句、策略模式、状态模式等来实现，其中卫语句即代码逻辑先考虑失败、异常、中断、退出等直接返回的情况，以方法多个出口的方式，解决代码中判断分支嵌套的问题，这是逆向思维的体现。
+# (八）注释规约
+- 1.类、类属性、类方法的注释必须使用 Javadoc 规范，使用/**内容*/格式，不得使用 // xxx 方式。
+- 2.所有的抽象方法（接口中的方法）必须要用 Javadoc 注释、除了返回值、参数、异常说明外，还必须指出该方法做什么事，实现什么功能。
+- 3.所有的类都必须添加创建者和创建日期。
+- 4.方法内部单行注释，在被注释语句上方另起一行，使用//注释。方法内部多行注释使用/* */注释，注意与代码对齐。
+- 5.所有的枚举类型字段必须要有注释，说明每个数据项的用途。
+
+# （九）其它
+- 1.在使用正则表达式时，利用好其预编译功能，可以有效加快正则匹配速度。
+  - 说明：不要在方法体内定义：Pattern patterm = Pattern.compile("规则");
+- 3.后台输送给页面的变量必须加$!{var}——中间的感叹号。
+  - 如果 var 为 null 或者为空，那么会直接将$(var)显示在页面上。
+- 6.日期格式化时，注意大小写。
+  - 表示日期和时间的格式：new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 小写 h 为 12 小时制。
+- 7.不要在视图模板加入任何复杂的逻辑，视图的职责是展示，不要抢模型和控制器的活。
