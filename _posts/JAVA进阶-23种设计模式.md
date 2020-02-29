@@ -14,7 +14,7 @@ blogexcerpt:
 # 23肿设计模式
 
 ## 一,设计模式的分类
-1. 创建型模式：共五种，工厂方法模式，抽象工厂模式，单例模式，建造模式，原型模式。
+1. 创建型模式：创建对象的时候，隐藏创建逻辑，共五种，工厂方法模式，抽象工厂模式，单例模式，建造模式，原型模式。
 2. 结构型模式：七种，适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。
 3. 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。
 4. 其实还有两类：并发型模式和线程池模式
@@ -39,6 +39,7 @@ blogexcerpt:
      public interface Sender{
          public void Send();
      }
+
     //创建实现类
      public class MailSender implements Sender{
          @Override
@@ -76,14 +77,14 @@ blogexcerpt:
      
      
      输出 this is is sms sender！
-     ```
+```
 
 
 
 
 多个静态方法
 
-    
+```
 public class SendFactory {  
     public static Sender produceMail(){  
         return new MailSender();  
@@ -135,6 +136,18 @@ Java应用中，单例对象能保证在一个JVM中，该对象只有一个实�
 - 有些类如交易所的核心交易引擎，控制着交易流程，如果该类可以创建多个的话，系统完全乱了。（比如一个军队出现了多个司令员同时指挥，肯定会乱成一团），所以只有使用单例模式，才能保证核心交易服务器独立控制整个流程。
 
 
+```
+public enum Singleton {  
+    INSTANCE;  
+    public void whateverMethod() {  
+    }  
+}
+```
+
+
+
+
+
 4. 定义：
     建造者模式：将一个复杂的对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。
     实用范围
@@ -147,7 +160,7 @@ Java应用中，单例对象能保证在一个JVM中，该对象只有一个实�
     2、ConcreteBuilder：实现Builder的接口以构造和装配该产品的各个部件，定义并明确它所创建的表示，并提供一个检索产品的接口。
     3、Director：构造一个使用Builder接口的对象，指导构建过程。
     4、Product：表示被构造的复杂对象。ConcreteBuilder创建该产品的内部表示并定义它的装配过程，包含定义组成部件的类，包括将这些部件装配成最终产品的接口。
-
+```
     角色Builder：
     public interface PersonBuilder {
         void buildHead();
@@ -250,7 +263,7 @@ Java应用中，单例对象能保证在一个JVM中，该对象只有一个实�
             Person manPerson = pd.constructPerson(new WomanBuilder());
         }
     }
-
+```
     建造者模式在使用过程中可以演化出多种形式：
     如果具体的被建造对象只有一个的话，可以省略抽象的Builder和Director，让ConcreteBuilder自己扮演指导者和建造者双重角色，甚至ConcreteBuilder也可以放到Product里面实现。
     在《Effective Java》书中第二条，就提到“遇到多个构造器参数时要考虑用构建器”，其实这里的构建器就属于建造者模式，只是里面把四个角色都放到具体产品里面了。
