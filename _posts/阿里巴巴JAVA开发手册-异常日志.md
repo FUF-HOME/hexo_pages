@@ -1,6 +1,6 @@
 ---
 title: 阿里巴巴JAVA开发手册-异常日志
-date: 2019-08-22 21:00:43
+date: 2020-01-22 21:00:43
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -10,7 +10,7 @@ tags:
     - JAVA,Alibaba
 blogexcerpt:
 ---
-<!-- more -->
+
 # 异常日志
 
 # (一) 异常处理

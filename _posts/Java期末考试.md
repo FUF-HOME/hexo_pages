@@ -1,6 +1,6 @@
 ---
 title: Java期末考试
-date: 2020-03-03 21:37:30
+date: 2019-03-03 21:37:30
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -11,9 +11,9 @@ tags:
 blogexcerpt:
 ---
 
-<!-- more -->
+
 # Java 期末考试
-<!-- more -->
+
 ## 基本数据类型
 ```
 byte = 0; // 占1个字节
@@ -26,6 +26,7 @@ long = 0; // 占8个字节
 boolean = false; //  视编译环境而定
 
 ```
+<!-- more -->
 ## File 类的使用，概念 ，内容
 
 ```

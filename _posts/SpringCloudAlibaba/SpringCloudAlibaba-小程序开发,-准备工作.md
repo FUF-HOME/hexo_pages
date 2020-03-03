@@ -1,9 +1,24 @@
+---
+title: SpringCloudAlibaba-小程序开发,-准备工作
+date: 2020-02-22 00:19:50
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+
+
 # 简介
 Spring Cloud Alibaba 是阿里巴巴公司结合自身微服务实践 开源的分布式开发工具集，此项目包含开发分布式应用微服务的必需组件，方便开发者通过Spring Cloud 编程模型轻松使用这些组件来开发分布式应用服务。  
 依托 Spring Cloud Alibaba，您只需要添加一些注解和少量配置，就可以将 Spring Cloud 应用接入阿里微服务解决方案，通过阿里中间件来迅速搭建分布式应用系统。Spring Cloud Alibaba 很可能会成为Spring Cloud 第二代的标准实现。
 https://github.com/alibaba/spring-cloud-alibaba/blob/master/README-zh.md
 
-
+<!-- more -->
 在开发中用到的环境和开发工具
 1. JDK1.8
 2. MySQL 5.7

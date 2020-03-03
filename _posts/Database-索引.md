@@ -1,6 +1,6 @@
 ---
 title: Database-索引
-date: 2020-07-26 21:27:18
+date: 2019-07-26 21:27:18
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -10,7 +10,7 @@ tags:
     - DATABASE
 blogexcerpt:
 ---
-<!-- more -->
+
 # 数据库
 
 # MySQL 索引

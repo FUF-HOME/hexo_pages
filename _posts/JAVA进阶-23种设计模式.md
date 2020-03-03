@@ -10,7 +10,7 @@ tags:
     - JAVA,设计模式
 blogexcerpt:
 ---
-<!-- more -->
+
 # 23肿设计模式
 <!-- more -->
 ## 一,设计模式的分类

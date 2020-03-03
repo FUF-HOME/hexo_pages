@@ -1,6 +1,6 @@
 ---
 title: 经典SQL练习题(MySQL版)
-date: 2020-03-03 21:33:20
+date: 2019-03-03 21:33:20
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -10,11 +10,6 @@ tags:
     - 默认
 blogexcerpt:
 ---
-
-<!-- more -->
-
- 
-
 
 # 经典SQL练习题(MySQL版)
 > 当SELECT 后 既有 表结构本身的字段，又有需要使用聚合函数（COUNT(),SUM(),MAX(),MIN(),AVG()等）的字段，就要用到group by分组，查询的限定条件里有需要用聚合函数计算的字段时也需要用分组

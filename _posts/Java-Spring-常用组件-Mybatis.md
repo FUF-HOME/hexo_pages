@@ -1,6 +1,6 @@
 ---
 title: Java-Spring-常用组件-Mybatis
-date: 2020-03-03 21:34:28
+date: 2019-03-03 21:34:28
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -11,7 +11,7 @@ tags:
 blogexcerpt:
 ---
 
-<!-- more -->
+
 
 # Mybatis
 Mybatis是一个半**ORM**（对象关系映射）框架，它内部封装了JDBC，开发时只需要关注SQL语句本身，不需要花费精力去处理加载驱动、创建连接、创建statement等繁杂的过程。程序员直接编写原生态sql，可以严格控制sql执行性能，灵活度高。   

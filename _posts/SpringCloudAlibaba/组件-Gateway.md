@@ -1,3 +1,17 @@
+---
+title: 组件-Gateway
+date: 2020-01-04 00:26:21
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+
 # Spring Cloud Gateway
 
 
@@ -10,7 +24,7 @@
 
 ## 架构
 ## 编写 GateWay
-
+<!-- more -->
 
 ## 路由谓词工厂
 

@@ -12,7 +12,7 @@ blogexcerpt:
 ---
 
 
-<!-- more -->
+
  ### 导读  
 上一篇文章简述了Spring学习，搭建一个Spring Boot项目，并且编写了一个HelloWord类，运行成功，返回了一个HelloWord字符串，现在我们接着学习Spring的其他特性。
 <!-- more -->

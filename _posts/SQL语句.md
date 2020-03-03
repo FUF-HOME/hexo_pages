@@ -1,6 +1,6 @@
 ---
 title: SQL语句
-date: 2020-03-03 21:39:02
+date: 2019-03-03 21:39:02
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -11,7 +11,7 @@ tags:
 blogexcerpt:
 ---
 
-<!-- more -->
+
 # SQL
 
 # 基础语句

@@ -1,6 +1,6 @@
 ---
 title: Java基础知识-反射
-date: 2020-03-03 21:34:58
+date: 2019-03-03 21:34:58
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -10,8 +10,6 @@ tags:
     - 默认
 blogexcerpt:
 ---
-
-<!-- more -->
 
 # Java基础知识-反射
 

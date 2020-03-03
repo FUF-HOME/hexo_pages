@@ -1,3 +1,16 @@
+---
+title: 一周刷完剑指offer
+date: 2019-03-04 00:18:45
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
 # 《剑指offer》Day1：第1~16题
 
 # Day1：第1~16题
@@ -20,6 +33,7 @@
 - T16. 合并两个排序的链表
 
 ## T1: 二维数组的查找
+<!-- more -->
 
 ## 题目描述
 ```

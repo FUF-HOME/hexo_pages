@@ -1,8 +1,23 @@
+---
+title: 组件-Feign
+date: 2019-08-04 00:19:14
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+
+
 # Feign
 Feign是从Netflix中分离出来的轻量级项目，能够在类接口上添加注释，成为一个REST API 客户端。
 
 # 实际项目-使用Feign
-
+<!-- more -->
 ## 加依赖
 
 ```

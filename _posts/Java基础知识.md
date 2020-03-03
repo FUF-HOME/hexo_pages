@@ -1,6 +1,6 @@
 ---
 title: Java基础知识
-date: 2020-03-03 21:36:42
+date: 2019-03-03 21:36:42
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -11,7 +11,6 @@ tags:
 blogexcerpt:
 ---
 
-<!-- more -->
 
  ###导读
  基础知识目录  

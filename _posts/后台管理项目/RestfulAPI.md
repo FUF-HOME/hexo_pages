@@ -1,7 +1,25 @@
+---
+title: RestfulAPI
+date: 2019-03-04 00:18:03
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+ 
+
+
 # RESTful
 REST（Representational State Transfer）,中文翻译叫"表述性状态转移".REST指的是一组架构约束条件和原则。"如果一个架构符合REST的约束条件和原则，我们就称它为RESTful架构，REST其实并没有创造新的技术、组件或服务，在我的理解中，它更应该是一种理念、一种思想，利用Web的现有特征和能力，更好地诠释和体现现有Web标准中的一些准则和约束。  
 RESTful API是面向资源的架构，因此其URL就应该是一个资源.
 举个例子~~
+<!-- more -->
+
 ```
 http://xxx.com/article/delect/1
 ```

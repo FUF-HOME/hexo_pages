@@ -1,6 +1,6 @@
 ---
 title: Java基础知识-源码分析-Map
-date: 2020-03-03 21:36:09
+date: 2019-03-03 21:36:09
 author: fuf
 notebook: blog
 evernote-version: 0
@@ -11,7 +11,6 @@ tags:
 blogexcerpt:
 ---
 
-<!-- more -->
 # 源码分析-Map
 java.util.Map接口表示键和值之间的映射。 Map接口不是Collection接口的子类型。 因此，它的行为与其余集合类型略有不同
 <!-- more -->

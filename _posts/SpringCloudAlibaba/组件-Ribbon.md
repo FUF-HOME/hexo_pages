@@ -1,9 +1,25 @@
+---
+title: 组件-Ribbon
+date: 2020-02-04 00:26:50
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+
+
+
 # Ribbon
 Ribbon is a Inter Process Communication (remote procedure calls) library with built in software load balancers. The primary usage model involves REST calls with various serialization scheme support.
 
 Ribbo是一个基于HTTP和TCP的客户端负载均衡器，当我们将Ribbon和注册中心(Eureka,Nacos)一起使用时，Ribbon会从注册中心去获取服务端列表，然后进行轮询访问以到达负载均衡的作用，客户端负载均衡中也需要心跳机制去维护服务端清单的有效性，当然这个过程需要配合服务注册中心一起完成。
 
-
+<!-- more -->
 # 负载均衡
 **负载平衡**（Load balancing）是一种计算机技术，用来在多个计算机（计算机集群）、网络连接、CPU、磁碟驱动器或其他资源中分配负载，以达到最佳化资源使用、最大化吞吐率、最小化响应时间、同时避免过载的目的。一般负载均衡软件会部署在服务器，和客户端两部分。
 1. 服务端：服务端软件负载均衡则主要是在服务器上安装一些具有负载均衡功能的软件来完成请求分发进 比较常见的有nginx...

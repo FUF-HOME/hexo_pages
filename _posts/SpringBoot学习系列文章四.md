@@ -11,7 +11,7 @@ tags:
 blogexcerpt:
 ---
 
-<!-- more -->
+
 # Spring Boot中使用Swagger2构建强大的RESTful API文档
 由于Spring Boot能够快速开发、便捷部署等特性，相信有很大一部分Spring Boot的用户会用来构建RESTful API。而我们构建RESTful API的目的通常都是由于多终端的原因，这些终端会共用很多底层业务逻辑，因此我们会抽象出这样一层来同时服务于多个移动端或者Web前端。
 <!-- more -->

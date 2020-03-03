@@ -1,3 +1,18 @@
+---
+title: SpringBoot学习-注解
+date: 2019-03-04 00:23:02
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+
+
 # 注解
 
 SpringBoot帮助开发者快速搭建Spring框架SpringBoot帮助开发者快速启动一个Web容器；
@@ -6,6 +21,7 @@ SpringBoot继承了原有Spring框架的优秀基因；
 
 SpringBoot简化了使用Spring的过程。
 
+<!-- more -->
 
 Spring由于其繁琐的配置，一度被人认为“配置地狱”，各种XML、Annotation配置，让人眼花缭乱，而且如果出错了也很难找出原因。在此背景下， Spring Boot应用而生。它使用习惯优于配置的理念，让项目快速运行起来，使用Spring Boot可以很轻松的创建一个独立运行(运行jar，内嵌servlet容器)、准生产级别的项目，可以大大减少我们的Spring配置。而配置中需要用到大量的注解。
 

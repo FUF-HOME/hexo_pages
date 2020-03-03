@@ -11,7 +11,7 @@ tags:
 blogexcerpt:
 ---
 
-<!-- more -->
+
 # SpringBoot
 SpringBoot是伴随着Spring4.0诞生的； SpringBoot的目标是简化Spring的开发过程、让开发者快速搭建框架和web容器。并为微服务提供更好的支持，提供服务监控能力。Spring为开发者带来了简单和能力：
 <!-- more -->

@@ -1,6 +1,21 @@
+---
+title: Java基础知识-多线程-生产者消费者
+date: 2019-03-04 00:21:02
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+
+
 # Java-多线程-生产者消费者
 想要充分的了解一项技术，最好的方法就是动手实践，只有再实践中，才能找到这项技术的解决了什么问题，优化了那些地方。废话不多说，直接上代码。
-
+<!-- more -->
 ```
 
 public class PublicBoxQueue {
