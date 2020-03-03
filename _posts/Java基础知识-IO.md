@@ -1,3 +1,17 @@
+ ---
+ title: Java基础知识-IO
+ date: 2020-03-03 21:36:25
+ author: fuf
+ notebook: blog
+ evernote-version: 0
+ source: 原创/转载
+ thumbnail: 
+ tags:
+     - 默认
+ blogexcerpt:
+ ---
+ 
+ <!-- more -->
 # Java基础知识-IO
 
 # 简介
@@ -8,7 +22,7 @@ Java.io 包几乎包含了所有操作输入、输出需要的类。所有这些
 Java.io 包中的流支持很多种格式，比如：基本类型、对象、本地化字符集等等。
 
 一个流可以理解**为一个数据的序列。输入流表示从一个源读取数据，输出流表示向一个目标写数据。**
-
+<!-- more -->
 Java 为 I/O 提供了强大的而灵活的支持，使其更广泛地应用到文件传输和网络编程中。
 
 # 1， File 类

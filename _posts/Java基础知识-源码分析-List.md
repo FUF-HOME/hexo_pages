@@ -1,6 +1,20 @@
+ ---
+ title: Java基础知识-源码分析-List
+ date: 2020-03-03 21:35:53
+ author: fuf
+ notebook: blog
+ evernote-version: 0
+ source: 原创/转载
+ thumbnail: 
+ tags:
+     - 默认
+ blogexcerpt:
+ ---
+ 
+ <!-- more -->
 # 源码分析-List
 List是**有序**的**Collection**，使用此接口能够精确的控制每个元素插入的位置。用户能够**使用索引**（元素在List中的位置，类似于数组下标）来访问List中的元素。
-
+<!-- more -->
 # 1. ArrayList
 ArrayList是Collection框架的一部分，出现在java.util包。它为我们提供了Java中的动态数组。虽然，它可能比标准数组慢，但在需要大量操作数组的程序中很有用。
 - ArrayList继承AbstractList类并实现List接口。

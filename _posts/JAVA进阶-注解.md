@@ -1,4 +1,19 @@
+---
+title: JAVA进阶-注解
+date: 2020-03-03 21:37:13
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+<!-- more -->
 # JAVA 注解的基本原理
+<!-- more -->
 注解作为解决 XML配置内容复杂，维护成本高的一种标记式配置方法，各种框架中的比重越来越高，特别是在SpringBoot 中。 但是这也不能说明注解就会代替 xml，注解简便，清晰，易于维护，但是也伴随这高耦合。而 xml 相对于注解则是相反的。  
 本文意不再辨析两者谁优谁劣，而在于以最简单的语言介绍注解相关的基本内容。
 

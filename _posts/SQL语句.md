@@ -1,7 +1,21 @@
+---
+title: SQL语句
+date: 2020-03-03 21:39:02
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+<!-- more -->
 # SQL
 
 # 基础语句
-
+<!-- more -->
 # 创建表
 ```
 CREATE TABLE <表名>(

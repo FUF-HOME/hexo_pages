@@ -1,7 +1,24 @@
+---
+title: Java 8的新特性
+date: 2020-03-03 21:34:12
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+<!-- more -->
+
+  
+
 # Java 8的新特性
 # 简介
 毫无疑问，Java 8是Java自Java 5（发布于2004年）之后的最重要的版本。这个版本包含语言、编译器、库、工具和JVM等方面的十多个新特性。在本文中我们将学习这些新特性，并用实际的例子说明在什么场景下适合使用。
-
+<!-- more -->
 # 2. Java语言的新特性
 Java 8 是Java的一个重大版本，在这部分，我们将介绍 Java 8的大部分新特性。
 ## 2.1 Lambda 表达式和函数式接口

@@ -1,6 +1,20 @@
+---
+title: Java基础知识-源码分析-Map
+date: 2020-03-03 21:36:09
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
+<!-- more -->
 # 源码分析-Map
 java.util.Map接口表示键和值之间的映射。 Map接口不是Collection接口的子类型。 因此，它的行为与其余集合类型略有不同
-
+<!-- more -->
 ## Map接口的特征
 
 映射不能包含重复的键，并且每个键最多可以映射到一个值。键值是否为空，HashMap 都允许null，LinkedHashMap 允许

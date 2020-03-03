@@ -1,3 +1,22 @@
+ ---
+ title: Java基础知识-基础语法
+ date: 2020-03-03 21:35:20
+ author: fuf
+ notebook: blog
+ evernote-version: 0
+ source: 原创/转载
+ thumbnail: 
+ tags:
+     - 默认
+ blogexcerpt:
+ ---
+ 
+ <!-- more -->
+ 
+  ###导读   
+ 
+ <!-- more -->
+ 
 # Java基础知识-基础语法
 ## 1. 基本数据类型
 - byte（1字节）

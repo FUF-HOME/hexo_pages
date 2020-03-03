@@ -10,14 +10,14 @@ tags:
     - JAVA,Alibaba
 blogexcerpt:
 ---
-
+<!-- more -->
 # 异常日志
 
 # (一) 异常处理
 - 1 可以通过预检查方式规避的 RuntimeException 异常不应该通过 catch 的方式处理，如：NullPointerException，IndexOutOfBoundsException 等等。
 - 5.有 try 块放到了事务代码中，catch 异常后，如果需要回滚事务，一定要注意手动回滚事务。
 - 7.不要在 finally 块中使用 return。
-
+<!-- more -->
     > 说明：try 块中的 return 语句执行成功后，并不马上返回，而是继续执行 finally 块中的语句，如果此处存在 return 语句，则在此直接返回，无情丢弃掉 try 块中的返回点。
 # （二）日志规约
 - 1.应用中不可直接使用日志系统（Log4j、Logback）中的 API，而应依赖使用日志框架 SLF4J 中的 API，使用门面模式的日志框架，有利于维护和各个类的日志处理方式统一。
