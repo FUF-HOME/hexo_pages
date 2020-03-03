@@ -1,26 +1,27 @@
- ---
- title: SpringBoot学习系列文章三
- date: 2019-03-03 21:38:23
- author: fuf
- notebook: blog
- evernote-version: 0
- source: 原创/转载
- thumbnail: 
- tags:
-     - 默认
- blogexcerpt:
- ---
+---
+title: index
+date: 2019-03-03 21:34:01
+author: fuf
+notebook: blog
+evernote-version: 0
+source: 原创/转载
+thumbnail: 
+tags:
+    - 默认
+blogexcerpt:
+---
+
  
 
 
 # FreeMaker 介绍
-<!-- more -->
+
 FreeMarker是一款免费的Java模板引擎，是一种基于模板和数据生成文本（HMLT、电子邮件、配置文件、源代码等）的工具，它不是面向最终用户的，而是一款程序员使用的组件。
 FreeMarker最初设计是用来在MVC模式的Web开发中生成HTML页面的，所以没有绑定Servlet或任意Web相关的东西上，所以它可以运行在非Web应用环境中。
 
 # 发展史
 FreeMarker第一版在1999年未就发布了，2002年初使用JavaCC（Java Compiler Compiler是一个用Java开发的语法分析生成器）重写了FreeMarker的核心代码，2015年FreeMarker代码迁移到了Apache下。
-
+<!-- more -->
 # 工作原理
 FreeMarker模板存储在服务器上，当有用户访问的时候，FreeMarker会查询出相应的数据，替换模板中的标签，生成最终的HTML返回给用户，如下图
 
